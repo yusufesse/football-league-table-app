@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import ReactDOM from "react-dom";
+
+import "./App.css";
+import League from "./components/League";
 
 function App() {
+  const [showLeague, setShowLeague] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {showLeague && (
+        <button onClick={() => setShowLeague(false)} className="btn btn--hide">
+          Hide league table
+        </button>
+      )}
+      {!showLeague && (
+        <button onClick={() => setShowLeague(true)} className="btn btn-delete">
+          Show league table
+        </button>
+      )}
+      {showLeague && <League />}
+
+      {ReactDOM.createPortal(
+        <p className="copyright">
+          Copyright &copy; 2022 by Yusuf. All rights reserved.
+        </p>,
+        document.body
+      )}
+    </>
   );
 }
 

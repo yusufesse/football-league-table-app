@@ -1,0 +1,26 @@
+.section-league {
+  max-width: 80rem;
+  margin: 5rem auto;
+  padding: 1.4rem;
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.eng {
+  background-color: #ffdeeb;
+}
+.fra {
+  background-color: #e5dbff;
+}
+
+.btn--add {
+  display: block;
+  width: 100%;
+}
+
+.league--name,
+.loading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 3.6rem 0;
+}
