@@ -6,6 +6,8 @@ This web application allows users to see the Premier League (ENG) and Ligue 1 (F
 
 This project was made using HTML, CSS, JavaScript and the React framework. Involves key React concepts such as useState and useEffect hooks, custom hooks, React Fragments, React Portals and conditonal template rendering.
 
+API used: https://github.com/azharimm/football-standings-api
+
 ### League Component and Custom 'Fetch' Hook
 
 Here, I defined the 'url' state by invoking the useState function (React hook) and assigning an API endpoint as an argument. This API endpoint would later on help fetch data for each clubs in the Premier League. Two buttons were defined in the returned JSX of this component and a callback function was assigned to the onClick prop. Clicking on the first button would update the 'url' state from it's inital value (an API endpoint for Premier League club data), to an API endpoint for Ligue 1 (FRA) club data. Clicking on the second button would do the exact opposite. This logic happens by invoking the url's state updating function and passing the API endpoint (string) as an argument. 
